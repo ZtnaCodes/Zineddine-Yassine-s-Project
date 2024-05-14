@@ -1,0 +1,75 @@
+<!-- PLEASE IF IT WORKS DO NOT TOUCH THE CODE !!! HOURS PUT INTO THIS : 54 HOURS -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Suggestion Box</title>
+    <link rel="stylesheet" href="styles/SuggestionBox.css" />
+    <script src="scripts/Suggestion Box.js"></script>
+  </head>
+  <body>
+    <main>
+      <center>
+        <h1>SUGGESTION BOX</h1>
+      </center>
+      <div id="box">
+        <h3>Kindly Follow the Instructions!</h3>
+        <form>
+          <label>Please Enter a Valid Name </label>
+          <br />
+          <input type="text" placeholder="First Name" class="input" id="nom" />
+          <br />
+          <input type="text" placeholder="Last Name" class="input" id="pre" />
+          <br />
+          <label
+            >What Location and Department or institution are you in ?
+            (optional)</label
+          >
+          <br />
+          <input
+            type="text"
+            class="input"
+            id="location"
+            placeholder="Location"
+          />
+          <br />
+          <label>What Type of Suggestion do you Have ?</label>
+          <br />
+          <select id="list">
+            <!-- <option>Please Select a Type of Suggestion</option> -->
+            <option><b> - - A Mistake</b></option>
+            <option><b> - - A Feedback</b></option>
+            <option disabled>
+              <b> - - A New Feature</b> Will Be Available Soon!
+            </option>
+          </select>
+          <br />
+          <label>Do you Have an Attachment you Would Like to Include ?</label>
+          <br />
+          <span
+            >This Feature is Still in Beta , Stay Tuned for Next Update !
+          </span>
+          <br />
+          <label>Would you Like a Follow up Email ? </label>
+          <br />
+          <input
+            type="email"
+            class="input"
+            id="mail"
+            placeholder="foulenfouleni@gmail."
+          />
+          <br />
+          <input
+            type="button"
+            id="btn"
+            value="Submit"
+            class="text"
+            onclick="return valid()"
+          />
+          <input type="reset" id="btn" class="text" />
+          <span id="msg"></span>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

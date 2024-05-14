@@ -1,0 +1,644 @@
+<!-- PLEASE IF IT WORKS DO NOT TOUCH THE CODE !!! HOURS PUT INTO THIS : 54 HOURS -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/FrontPage.css" />
+    <title>Project</title>
+    <script src="scripts/FrontPage&Cart.js"></script>
+  </head>
+  <body
+    onload="
+  localStorage.setItem('quantity',JSON.stringify(0));
+    localStorage.setItem('table',JSON.stringify([]));
+  "
+  >
+  <div id="popup">
+    <img src="images/zitzest-high-resolution-logo-black-transparent.png" id="popupimg">
+    <br>
+    <p>
+      <h4>Who am I ? </h4>
+      I am an 18-year-old programming enthusiast. I recently launched my company, ZitZest, which aims to bring a touch of creativity to the digital world.
+    <h4>My Mission</h4>
+    ZitZest's mission is to zestify your world by offering innovative software solutions. We believe in the power of creativity to transform the way we interact with technology.
+    <h4>My Dream</h4>
+    My dream is to become a software engineer and work for a renowned company like the FAANG companies. I am passionate about programming and determined to push the limits of technological excellence.
+    </p>
+    <button id="popupButton">Close</button>
+  </div>  
+    <main>
+      <header>
+        <div class="div-header">
+          <a href="FrontPage.html">
+            <img
+              src="images/zitzest-high-resolution-logo-white-transparent.png"
+              id="logo"
+            />
+          </a>
+        </div>
+        <div>
+          <datalist id="search">
+            <option
+              value="Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz"
+            ></option>
+            <option
+              value="Black Glasses With Polarized Lenses for Men and Women"
+            ></option>
+            <option
+              value="Sun Hats for Women and Men , Pachable Straw Beach Hat"
+            ></option>
+            <option
+              value="Mens Womens Running Trainers Lightweight Sport Shoes"
+            ></option>
+            <option
+              value="2 Plain , Cotton , Fruit of the Loom Men's Original Tee T-shirt"
+            ></option>
+            <option
+              value="Women Chiffon Beachzear Coverup in Black , All Sizes Available"
+            ></option>
+            <option
+              value="6 Piece non Stick Baking Set , Extremely Useful and such a Time Saver"
+            ></option>
+            <option
+              value="Trash Can with Foot Pedal , 50 Liter or 25 Liter"
+            ></option>
+            <option
+              value="Double Elongated Twist Frensh Wire Earrings , in Gold or in Silver"
+            ></option>
+            <option
+              value="Men Cozy Fleece Zip Up Hoodie , Red Color , all Sizes Available"
+            ></option>
+          </datalist>
+          <input list="search" id="search-bar" />
+          <div id="icon-div">
+            <img
+              src="images/icons/search-icon.png"
+              id="search-icon"
+              onclick="alert('Can Not Do This Yet bc We Still Did Not Learn About DataBase 😥 ')"
+            />
+          </div>
+        </div>
+        <div id="ro">
+          <a href="SuggestionBox.html">
+            <strong>Suggestion Box</strong>
+          </a>
+        </div>
+        <div>
+          <a href="cart.html">
+            <img src="images/icons/cart-icon.png" id="cart" />
+            <span id="cart-quantity">0</span>
+          </a>
+          <span id="cart-name">Cart</span>
+        </div>
+      </header>
+      <section id="sec1">
+        <div class="container" id="item1">
+          <div class="img-container">
+            <img
+              src="images/liquid-laundry-detergent-plain.jpg"
+              id="img-product1"
+            />
+          </div>
+          <div class="product-name">
+            Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz
+          </div>
+          <div class="rating">
+            <img src="images/ratings/rating-40.png" class="stars" />
+            <span class="vote-count">169</span>
+          </div>
+          <div class="price">$ 28.99</div>
+          <div class="product-quantity">
+            <select id="liste1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="variation">
+            <span>Style</span>
+            <br />
+            <input type="checkbox" value="plain" class="button" id="b1.1" />
+            <span>Plain</span>
+            <input type="checkbox" value="lavendar" class="button" id="b1.2" />
+            <span>Lavendar</span>
+          </div>
+          <div class="product-spacer">
+            <p></p>
+          </div>
+          <div class="add-to-cart-container">
+            <input
+              type="button"
+              id="btn"
+              value="Add To Cart"
+              class="add-to-cart-button"
+              onclick="updateCartQuantity1()"
+            />
+          </div>
+        </div>
+        <div class="container" id="item2">
+          <div class="img-container">
+            <img src="images/round-sunglasses-black.jpg" id="img-product2" />
+          </div>
+          <div class="product-name">
+            Black Glasses With Polarized Lenses for Men and Women
+          </div>
+          <div class="rating">
+            <img src="images/ratings/rating-35.png" class="stars" />
+            <span class="vote-count">62</span>
+          </div>
+          <div class="price">$ 15.60</div>
+          <div class="product-quantity">
+            <select id="liste2">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="variation">
+            <span>Style</span>
+            <br />
+            <input type="checkbox" value="black" class="button" id="b2.1" />
+            <span>Black</span>
+            <input type="checkbox" value="gold" class="button" id="b2.2" />
+            <span>Gold</span>
+          </div>
+          <div class="product-spacer">
+            <p></p>
+          </div>
+          <div class="add-to-cart-container">
+            <input
+              type="button"
+              id="btn"
+              value="Add To Cart"
+              class="add-to-cart-button"
+              onclick="updateCartQuantity2()"
+            />
+          </div>
+        </div>
+        <div class="container" id="item3">
+          <div class="img-container">
+            <img src="images/straw-sunhat.webp" id="img-product3" />
+          </div>
+          <div class="product-name">
+            Sun Hats for Women and Men , Pachable Straw Beach Hat
+          </div>
+          <div class="rating">
+            <img src="images/ratings/rating-25.png" class="stars" />
+            <span class="vote-count">15</span>
+          </div>
+          <div class="price">$ 22.00</div>
+          <div class="product-quantity">
+            <select id="liste3">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="variation">
+            <span>Size</span>
+            <br />
+            <input type="checkbox" value="big" class="button" id="b3.1" />
+            <span>Big</span>
+            <input type="checkbox" value="small" class="button" id="b3.2" />
+            <span>Small</span>
+          </div>
+          <div class="product-spacer">
+            <p></p>
+          </div>
+          <div class="add-to-cart-container">
+            <input
+              type="button"
+              id="btn"
+              value="Add To Cart"
+              class="add-to-cart-button"
+              onclick="updateCartQuantity3()"
+            />
+          </div>
+        </div>
+        <div class="container" id="item4">
+          <div class="img-container">
+            <img src="images/men-athletic-shoes-green.jpg" id="img-product4" />
+          </div>
+          <div class="product-name">
+            Mens Womens Running Trainers Lightweight Sport Shoes
+          </div>
+          <div class="rating">
+            <img src="images/ratings/rating-35.png" class="stars" />
+            <span class="vote-count">124</span>
+          </div>
+          <div class="price">$ 30.00</div>
+          <div class="product-quantity">
+            <select id="liste4">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="variation">
+            <span>Size</span>
+            <br />
+            <input type="checkbox" value="S" class="button" id="b4.1" />
+            <span>S</span>
+            <input type="checkbox" value="M" class="button" id="b4.2" />
+            <span>M</span>
+            <input type="checkbox" value="L" class="button" id="b4.3" />
+            <span>L</span>
+          </div>
+          <div class="product-spacer">
+            <p></p>
+          </div>
+          <div class="add-to-cart-container">
+            <input
+              type="button"
+              id="btn"
+              value="Add To Cart"
+              class="add-to-cart-button"
+              onclick="updateCartQuantity4()"
+            />
+          </div>
+        </div>
+        <div class="container" id="item5">
+          <div class="img-container">
+            <img
+              src="images/adults-plain-cotton-tshirt-2-pack-teal.jpg"
+              id="img-product5"
+            />
+          </div>
+          <div class="product-name">
+            2 Plain , Cotton , Fruit of the Loom Men's Original Tee T-shirt
+          </div>
+          <div class="rating">
+            <img src="images/ratings/rating-45.png" class="stars" />
+            <span class="vote-count">256</span>
+          </div>
+          <div class="price">$ 08.00</div>
+          <div class="product-quantity">
+            <select id="liste5">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="variation">
+            <span>Size</span>
+            <br />
+            <input type="checkbox" value="S" class="button" id="b5.1" />
+            <span>S</span>
+            <input type="checkbox" value="M" class="button" id="b5.2" />
+            <span>M</span>
+            <input type="checkbox" value="L" class="button" id="b5.3" />
+            <span>L</span>
+          </div>
+          <div class="product-spacer">
+            <p></p>
+          </div>
+          <div class="add-to-cart-container">
+            <input
+              type="button"
+              id="btn"
+              value="Add To Cart"
+              class="add-to-cart-button"
+              onclick="updateCartQuantity5()"
+            />
+          </div>
+        </div>
+        <div id="ztna">
+          <center>
+            <img src="images/tag.png" id="tag" />
+          </center>
+        </div>
+      </section>
+      <aside>
+        <span id="ads">ADS:</span>
+        <div class="square">
+          <span id="ad"
+            ><a href="https://fr.wikipedia.org/wiki/Rickroll"
+              ><span>Click Here <br />For 1$ mil</span></a
+            ></span
+          >
+        </div>
+        <div>
+          <img src="images/rickroll.jpg" id="rickroll" />
+        </div>
+        <span id="rat2">Please Consider <br />Leaving A Rating :</span>
+        <div class="rating2">
+          <input value="5" name="rating" id="star5" type="radio" />
+          <label for="star5"></label>
+          <input value="4" name="rating" id="star4" type="radio" />
+          <label for="star4"></label>
+          <input value="3" name="rating" id="star3" type="radio" />
+          <label for="star3"></label>
+          <input value="2" name="rating" id="star2" type="radio" />
+          <label for="star2"></label>
+          <input value="1" name="rating" id="star1" type="radio" />
+          <label for="star1"></label>
+        </div>
+      </aside>
+      <section id="sec2">
+        <div class="container" id="item1">
+          <div class="img-container">
+            <img
+              src="images/women-chiffon-beachwear-coverup-black.jpg"
+              id="img-product6"
+            />
+          </div>
+          <div class="product-name">
+            Women Chiffon Beachzear Coverup in Black , All Sizes Available
+          </div>
+          <div class="rating">
+            <img src="images/ratings/rating-15.png" class="stars" />
+            <span class="vote-count">23</span>
+          </div>
+          <div class="price">$ 48.89</div>
+          <div class="product-quantity">
+            <select id="liste6">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="variation">
+            <span>Size</span>
+            <br />
+            <input type="checkbox" value="S" class="button" id="b6.1" />
+            <span>S</span>
+            <input type="checkbox" value="M" class="button" id="b6.2" />
+            <span>M</span>
+            <input type="checkbox" value="L" class="button" id="b6.3" />
+            <span>L</span>
+          </div>
+          <div class="product-spacer">
+            <p></p>
+          </div>
+          <div class="add-to-cart-container">
+            <input
+              type="button"
+              id="btn"
+              value="Add To Cart"
+              class="add-to-cart-button"
+              onclick="updateCartQuantity6()"
+            />
+          </div>
+        </div>
+        <div class="container" id="item2">
+          <div class="img-container">
+            <img
+              src="images/6-piece-non-stick-baking-set.webp"
+              id="img-product7"
+            />
+          </div>
+          <div class="product-name">
+            6 Piece non Stick Baking Set , Extremely Useful and such a Time
+            Saver
+          </div>
+          <div class="rating">
+            <img src="images/ratings/rating-50.png" class="stars" />
+            <span class="vote-count">245</span>
+          </div>
+          <div class="price">$32.25</div>
+          <div class="product-quantity">
+            <select id="liste7">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="variation">
+            <span>Color</span>
+            <br />
+            <input type="checkbox" value="Black" class="button" id="b7.1" />
+            <span>Black</span>
+            <input type="checkbox" value="White" class="button" id="b7.2" />
+            <span>White</span>
+          </div>
+          <div class="product-spacer">
+            <p></p>
+          </div>
+          <div class="add-to-cart-container">
+            <input
+              type="button"
+              id="btn"
+              value="Add To Cart"
+              class="add-to-cart-button"
+              onclick="updateCartQuantity7()"
+            />
+          </div>
+        </div>
+        <div class="container" id="item3">
+          <div class="img-container">
+            <img
+              src="images/trash-can-with-foot-pedal-50-liter.jpg"
+              id="img-product8"
+            />
+          </div>
+          <div class="product-name">
+            Trash Can with Foot Pedal , 50 Liter or 25 Liter
+          </div>
+          <div class="rating">
+            <img src="images/ratings/rating-30.png" class="stars" />
+            <span class="vote-count">68</span>
+          </div>
+          <div class="price">$ 06.75</div>
+          <div class="product-quantity">
+            <select id="liste8">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="variation">
+            <span>Size</span>
+            <br />
+            <input type="checkbox" value="big" class="button" id="b8.1" />
+            <span>Big</span>
+            <input type="checkbox" value="small" class="button" id="b8.2" />
+            <span>Small</span>
+          </div>
+          <div class="product-spacer">
+            <p></p>
+          </div>
+          <div class="add-to-cart-container">
+            <input
+              type="button"
+              id="btn"
+              value="Add To Cart"
+              class="add-to-cart-button"
+              onclick="updateCartQuantity8()"
+            />
+          </div>
+        </div>
+        <div class="container" id="item4">
+          <div class="img-container">
+            <img
+              src="images/double-elongated-twist-french-wire-earrings.webp"
+              id="img-product9"
+            />
+          </div>
+          <div class="product-name">
+            Double Elongated Twist Frensh Wire Earrings , in Gold or in Silver
+          </div>
+          <div class="rating">
+            <img src="images/ratings/rating-35.png" class="stars" />
+            <span class="vote-count">56</span>
+          </div>
+          <div class="price">$ 89.99</div>
+          <div class="product-quantity">
+            <select id="liste9">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="variation">
+            <span>Style</span>
+            <br />
+            <input type="checkbox" value="Gold" class="button" id="b9.1" />
+            <span>Gold</span>
+            <input type="checkbox" value="Silver" class="button" id="b9.2" />
+            <span>Silver</span>
+          </div>
+          <div class="product-spacer">
+            <p></p>
+          </div>
+          <div class="add-to-cart-container">
+            <input
+              type="button"
+              id="btn"
+              value="Add To Cart"
+              class="add-to-cart-button"
+              onclick="updateCartQuantity9()"
+            />
+          </div>
+        </div>
+        <div class="container" id="item5">
+          <div class="img-container">
+            <img
+              src="images/men-cozy-fleece-zip-up-hoodie-red.jpg"
+              id="img-product10"
+            />
+          </div>
+          <div class="product-name">
+            Men Cozy Fleece Zip Up Hoodie , Red Color , all Sizes Available
+          </div>
+          <div class="rating">
+            <img src="images/ratings/rating-40.png" class="stars" />
+            <span class="vote-count">169</span>
+          </div>
+          <div class="price">$ 24.99</div>
+          <div class="product-quantity">
+            <select id="liste10">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+          <div class="variation">
+            <span>Size</span>
+            <br />
+            <input type="checkbox" value="S" class="button" id="b10.1" />
+            <span>S</span>
+            <input type="checkbox" value="M" class="button" id="b10.2" />
+            <span>M</span>
+            <input type="checkbox" value="L" class="button" id="b10.3" />
+            <span>L</span>
+          </div>
+          <div class="product-spacer">
+            <p></p>
+          </div>
+          <div class="add-to-cart-container">
+            <input
+              type="button"
+              id="btn"
+              value="Add To Cart"
+              class="add-to-cart-button"
+              onclick="updateCartQuantity10()"
+            />
+          </div>
+        </div>
+        <div id="ztna">
+          <center>
+            <img src="images/tag.png" id="tag" />
+          </center>
+        </div>
+      </section>
+    </main>
+    <script>
+      var popupButton = document.getElementById('popupButton');
+    var popup = document.getElementById('popup');
+
+    popupButton.addEventListener('click', function() {
+    popup.style.display = 'none';
+    });
+  </script>
+  </body>
+</html>

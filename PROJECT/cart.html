@@ -1,0 +1,129 @@
+<!-- PLEASE IF IT WORKS DO NOT TOUCH THE CODE !!! HOURS PUT INTO THIS : 54 HOURS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles/Cart.css" />
+    <script src="scripts/FrontPage&Cart.js"></script>
+  </head>
+  <body
+    onload="
+    showPrice();
+    showProducts();
+  "
+  >
+    <header>
+      <div class="div-header">
+        <a href="FrontPage.html">
+          <img
+            src="images/zitzest-high-resolution-logo-white-transparent.png"
+            id="logo"
+          />
+        </a>
+      </div>
+      <div>
+        <datalist id="search">
+          <option
+            value="Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz"
+          ></option>
+          <option
+            value="Black Glasses With Polarized Lenses for Men and Women"
+          ></option>
+          <option
+            value="Sun Hats for Women and Men , Pachable Straw Beach Hat"
+          ></option>
+          <option
+            value="Mens Womens Running Trainers Lightweight Sport Shoes"
+          ></option>
+          <option
+            value="2 Plain , Cotton , Fruit of the Loom Men's Original Tee T-shirt"
+          ></option>
+          <option
+            value="Women Chiffon Beachzear Coverup in Black , All Sizes Available"
+          ></option>
+          <option
+            value="6 Piece non Stick Baking Set , Extremely Useful and such a Time Saver"
+          ></option>
+          <option
+            value="Trash Can with Foot Pedal , 50 Liter or 25 Liter"
+          ></option>
+          <option
+            value="Double Elongated Twist Frensh Wire Earrings , in Gold or in Silver"
+          ></option>
+          <option
+            value="Men Cozy Fleece Zip Up Hoodie , Red Color , all Sizes Available"
+          ></option>
+        </datalist>
+        <input list="search" id="search-bar" />
+        <div id="icon-div">
+          <img
+            src="images/icons/search-icon.png"
+            id="search-icon"
+            onclick="alert('Can Not Do This Yet bc We Still Did Not Learn About DataBase 😥 ')"
+          />
+        </div>
+      </div>
+      <div id="ro">
+        <a href="SuggestionBox.html">
+          <strong>Suggestion Box</strong>
+        </a>
+      </div>
+      <div>
+        <a href="cart.html">
+          <img src="images/icons/cart-icon.png" id="cart" />
+          <span id="cart-quantity">0</span>
+        </a>
+        <span id="cart-name">Cart</span>
+      </div>
+    </header>
+    <main>
+      <div id="one">
+        <img src="images/Your Products.png" id="prods" />
+        <div class="banter-loader">
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+        </div>
+        <div class="banter-loader" id="second-animation">
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+          <div class="banter-loader__box"></div>
+        </div>
+        <div id="products"></div>
+      </div>
+      <div id="submit">
+        <img src="images/fin.png" id="fin" />
+        <fieldset>
+          <legend>Order Summary</legend>
+          <fieldset>
+            <span>Price</span> <span id="price"></span>
+            <br />
+            <span>Shipping & Handling : </span> <span>$04.99</span>
+            <br />
+            <span>Total Before Taxes : </span> <span id="totb4"></span>
+            <br />
+            <span>Estimated Taxes(10%) : </span> <span id="tax"></span>
+          </fieldset>
+          <span>Total Order : </span> <span id="tot"></span>
+        </fieldset>
+        <img
+          src="images/zitzest-high-resolution-logo-black-transparent.png"
+          id="zitzest"
+        />
+      </div>
+    </main>
+  </body>
+</html>
